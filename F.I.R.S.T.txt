@@ -1,0 +1,15 @@
+Fast: testes mais rápidos significam feedback mais rápido.
+
+Isolated/Independent: os testes devem ser isolados de outros testes, a ordem
+de execução deles não deve afetar a execução dos demais 
+
+Repeatable: significa, para a mesma entrada, devemos obter o mesmo resultado
+
+Self validating: Após a conclusão de um teste, seus resultados devem ser claros,
+um teste deve ser aprovado ou recusado
+
+Thorough: os testes devem ser dolorosos, assim como um conjunto de testes melhor
+deve ser completo. 100% de cobertua de código não signifca que temos testes 
+completos
+
+Devem ser montados e após a execução desmontados 

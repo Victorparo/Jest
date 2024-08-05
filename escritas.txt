@@ -1,0 +1,66 @@
+dupla de teste é um objeto fictício que podemos usar no lugar de um objeto real
+para fins de teste
+
+o mais simples é o objeto fictício, que é apenas transmitido, mas não é usado.
+Em seguida, temos uma categoria importante de objetos falsos que são simplificados,
+trablhando em implementaçãos, implementações de trabalho que usam um atalho
+
+
+O que são testes duplos?  
+‣ Objetos falsos usados ​​no lugar de um objeto real para fins de teste 
+‣ Objetos fictícios: passados, mas não usados 
+​​‣ Fakes: implementação de trabalho simplificada, é preciso um atalho 
+‣ Stubs: objetos incompletos usados ​​como argumentos 
+‣ Spies: rastreia informações sobre como uma unidade é chamado de 
+‣ Mocks: pré-programados com expectativas
+‣ Note for jest: mocks e spies têm muito em comum
+
+-----------------------------
+Mocks: mais usados, mais debatidos  
+‣ A maneira como os usamos influencia muito a maneira como escrevemos testes. 
+Se precisarmos usá-los demais, há algo errado com nosso código N 
+‣ Estilos de teste/simulação: Londres/Chicago
+
+Teste duplo na prática  
+‣ Estilos/escolas TDD: Londres e Chicago (Detroit) 
+‣ Palavras grandes para impressionar 
+‣ Entenda a diferença nos estilos de teste 
+‣ O que é uma unidade? Uma função? Uma característica?
+
+Chicago – baixo foco em simulações  
+‣ Uma unidade: uma coleção de peças 
+‣ Teste de uma visão mais ampla 
+‣ Pouco uso de simulações
+
+Londres - uso pesado de simulações  
+‣ Uma unidade: uma classe 
+‣ Simule todas as suas dependências
+
+------------------------------
+metodos skip, todo, only
+
+skip: Ignora um teste ou bloco de testes.
+todo: Marca um teste como "a fazer".
+only: Executa apenas um teste ou bloco de testes específico.
+
+test.skip('testa a função X', () => {
+  // Este teste será pulado e não será executado
+});
+
+test.todo('testa a função Y');
+
+test.only('testa a função Z', () => {
+  // Apenas este teste será executado
+});
+
+describe.skip('Bloco de testes', () => {
+  test('teste A', () => {
+    // Este teste será pulado
+  });
+});
+
+describe.only('Bloco de testes', () => {
+  test('teste B', () => {
+    // Apenas os testes deste bloco serão executados
+  });
+});
